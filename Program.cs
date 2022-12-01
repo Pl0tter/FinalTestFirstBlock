@@ -12,16 +12,17 @@
 
 Console.WriteLine("Введите строки через ',':");
 string[] textArray = Console.ReadLine().Split(',');
+int limitLength = 3;
 int count = 0;
 for (int i = 0; i < textArray.Length; i++)
 {
-    if (textArray[i].Length <= 3) count++;
+    if (textArray[i].Length <= limitLength) count++;
 }
 string[] textArrayResult = new string[count];
 count = 0;
 for (int i = 0; i < textArray.Length; i++)
 {
-    if (textArray[i].Length <= 3)
+    if (textArray[i].Length <= limitLength)
     {
         textArrayResult[count] = textArray[i];
         count++;
